@@ -1,6 +1,4 @@
 import { Button, Card, styled, Text } from "@nextui-org/react";
-import { nanoid } from "nanoid";
-import { useEffect } from "react";
 import { HiUserAdd } from "react-icons/hi";
 import useParticipants from "../../src/participants.hook";
 import ParticipantEditor from "./participant-editor";
