@@ -26,7 +26,7 @@ export default function Detail() {
           กลับ
         </Button>
         <Button
-          onClick={() => route.push("/detail")}
+          onClick={() => route.push("/result")}
           iconRight={<HiArrowRight />}
           auto
         >
