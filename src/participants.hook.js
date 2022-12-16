@@ -29,7 +29,9 @@ export default function useParticipants() {
   const removeParticipant = (id) => {
     const participantIndex = participants.findIndex((p) => id === p.id);
     participants.splice(participantIndex, 1);
-    handleSetParticipants([...participants])
+    handleSetParticipants([...participants]);
+
+    if (participants.length == 0) addParticipant({ name: "", isEdit: true });
   };
 
   useEffect(() => {

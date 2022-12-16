@@ -1,4 +1,5 @@
 import { Button, Card, styled, Text } from "@nextui-org/react";
+import { useEffect } from "react";
 import { HiUserAdd } from "react-icons/hi";
 import useParticipants from "../../src/participants.hook";
 import ParticipantEditor from "./participant-editor";
@@ -10,7 +11,8 @@ const CardFooterContainer = styled(Card.Footer, {
 });
 
 export default function Participants() {
-  const { participants, addParticipant, updateParticipant, removeParticipant } = useParticipants();
+  const { participants, addParticipant, updateParticipant, removeParticipant } =
+    useParticipants();
 
   const handleAddPerson = () => {
     addParticipant({
@@ -25,7 +27,7 @@ export default function Participants() {
 
   const handleRemovePersion = (id) => {
     removeParticipant(id);
-  }
+  };
 
   return (
     <Card>
