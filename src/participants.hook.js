@@ -21,6 +21,8 @@ export default function useParticipants() {
       {
         id: nanoid(8),
         isEdit: true,
+        start: 0,
+        end: 0,
         ...participant,
       },
     ]);

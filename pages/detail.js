@@ -1,6 +1,7 @@
 import { Button, styled } from "@nextui-org/react";
 import { useRouter } from "next/router";
 import { HiArrowLeft, HiArrowRight } from "react-icons/hi";
+import Details from "../components/details/details";
 
 const DetailContainer = styled("div", {});
 const ButtonContainer = styled("div", {
@@ -15,6 +16,7 @@ export default function Detail() {
   return (
     <DetailContainer>
       รายละเอียด
+      <Details />
       <ButtonContainer>
         <Button
           onClick={() => route.replace("/")}
