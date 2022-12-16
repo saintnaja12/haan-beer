@@ -26,7 +26,11 @@ export default function useParticipants() {
     ]);
   };
 
-  const removeParticipant = (id) => {};
+  const removeParticipant = (id) => {
+    const participantIndex = participants.findIndex((p) => id === p.id);
+    participants.splice(participantIndex, 1);
+    handleSetParticipants([...participants])
+  };
 
   useEffect(() => {
     const participantString = localStorage.getItem("participants");

@@ -10,7 +10,7 @@ const CardFooterContainer = styled(Card.Footer, {
 });
 
 export default function Participants() {
-  const { participants, addParticipant, updateParticipant } = useParticipants();
+  const { participants, addParticipant, updateParticipant, removeParticipant } = useParticipants();
 
   const handleAddPerson = () => {
     addParticipant({
@@ -22,6 +22,10 @@ export default function Participants() {
   const handleUpdatePerson = (id, p) => {
     updateParticipant(id, p);
   };
+
+  const handleRemovePersion = (id) => {
+    removeParticipant(id);
+  }
 
   return (
     <Card>
@@ -40,6 +44,7 @@ export default function Participants() {
             <ParticipantSelector
               key={participant.id}
               participant={participant}
+              onRemove={handleRemovePersion}
             />
           )
         )}
