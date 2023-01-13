@@ -1,17 +1,17 @@
 import { NextUIProvider } from "@nextui-org/react";
 import { ThemeProvider as NextThemesProvider } from "next-themes";
 import MainLayout from "../layouts/MainLayout";
-import { defaultTheme } from "../src/theme";
+import { lightTheme, darkTheme } from "../src/theme";
 import "../styles/globals.css";
 
 function MyApp({ Component, pageProps }) {
   return (
     <NextThemesProvider
-      defaultTheme="dark"
+      defaultTheme="system"
       attribute="class"
       value={{
-        light: defaultTheme,
-        dark: defaultTheme,
+        light: lightTheme.className,
+        dark: darkTheme.className,
       }}
     >
       <NextUIProvider>
