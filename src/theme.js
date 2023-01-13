@@ -5,8 +5,8 @@ export const lightTheme = createTheme({
   type: "light",
   theme: {
     colors: {
-      background: "#847996",
-      text: "#000",
+      backgroundColor: "#E1E2EF",
+      text: "#02020A",
     }, // optional
   },
 });
@@ -15,19 +15,19 @@ export const darkTheme = createTheme({
   type: "dark",
   theme: {
     colors: {
-      background: "#310A31",
-      text: "#fff",
+      backgroundColor: "#02020A",
+      text: "#E1E2EF",
     }, // optional
   },
 });
 
 export const defaultTheme = createTheme({
   type: "dark",
+  colors: {
+    darkPurple: "#310A31",
+    rhythm: "#847996",
+  },
   theme: {
-    colors: {
-      darkPurple: "#310A31",
-      rhythm: "#847996",
-    },
     breakpoints: {
       sm: "650px",
       md: "650px",
